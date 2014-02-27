@@ -13,8 +13,8 @@
     "test"
   ],
   "dependencies": {
-    "troopjs-browser": ">=2.1",
-    "troopjs-core": ">=2.1",
-		"jquery": ">=1.7.0 <2.1.0"
+    "troopjs-browser": "~4",
+    "troopjs-core": "~2.1",
+    "jquery": ">=1.7.0 <2.1.0"
 	}
 }
