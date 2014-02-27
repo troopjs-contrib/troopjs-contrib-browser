@@ -4,7 +4,7 @@
  */
 define([
 	"troopjs-browser/component/widget",
-	"troopjs-core/net/uri",
+	"../net/uri",
 	"../jquery/hashchange"
 ], function (Widget, URI) {
 	"use strict";
