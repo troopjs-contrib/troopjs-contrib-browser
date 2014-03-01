@@ -1,20 +1,20 @@
 {
-  "name": "troopjs-contrib-browser",
-  "version": "0.0.0",
-  "authors": [
-    "Mikael Karon"
-  ],
-  "description": "TroopJS browser contributions",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test"
-  ],
-  "dependencies": {
-    "troopjs-browser": "~4",
-    "troopjs-core": "~2.1",
-    "jquery": ">=1.7.0 <2.1.0"
+	"name": "troopjs-contrib-browser",
+	"version": "0.0.0",
+	"authors": [
+		"Mikael Karon"
+	],
+	"description": "TroopJS browser contributions",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test"
+	],
+	"dependencies": {
+		"troopjs-browser": "~4",
+		"troopjs-core": "~2.1",
+		"jquery": ">=1.7.0 <2.1.0"
 	}
 }
