@@ -4,7 +4,7 @@ buster.testCase("troopjs-browser/net/uri", function (run) {
 
 	var assert = buster.referee.assert;
 
-	require( [ "troopjs-browser/net/uri" ] , function (URI) {
+	require( [ "troopjs-contrib-browser/net/uri" ] , function (URI) {
 		run({
 			"(empty)" : function () {
 				var source = "";
