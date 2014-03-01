@@ -159,7 +159,6 @@ define([
 		 *
 		 * The implementation of this method would look like:
 		 *
-		 * 	var URI = require('troopjs-core/net/uri');
 		 * 	"data2uri": function (data){
 		 * 		var uri = URI();
 		 * 		var paths = [data.page.title, data.section.name];
