@@ -2,8 +2,8 @@
  * @license MIT http://troopjs.mit-license.org/
  */
 define([
-	"../../troopjs-core/mixin/base",
-	"../pubsub/hub"
+	"troopjs-core/mixin/base",
+	"troopjs-core/pubsub/hub"
 ], function PubSubLogger(Base, hub) {
 	"use strict";
 
@@ -34,7 +34,7 @@ define([
 	 * @hide
 	 */
 	return Base.create({
-		"displayName" : "core/logger/pubsub",
+		"displayName" : "troopjs-contrib-browser/logger/pubsub",
 
 		/**
 		 * @inheritdoc core.logger.console#log

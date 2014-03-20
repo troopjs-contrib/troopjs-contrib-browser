@@ -2,7 +2,7 @@
  * @license MIT http://troopjs.mit-license.org/
  */
 define([
-	"../../troopjs-core/mixin/base",
+	"troopjs-core/mixin/base",
 	"poly/function"
 ], function ConsoleLogger(Base) {
 	"use strict";
@@ -80,7 +80,7 @@ define([
 	 */
 
 	return Base.create({
-			"displayName" : "core/logger/console"
+			"displayName" : "troopjs-contrib-browser/logger/console"
 		},
 		spec);
 });

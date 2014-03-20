@@ -2,7 +2,7 @@
  * @license MIT http://troopjs.mit-license.org/
  */
 define([
-	"../../troopjs-core/component/service",
+	"troopjs-core/component/service",
 	"troopjs-utils/merge",
 	"when"
 ], function logger(Service, merge, when) {
@@ -120,7 +120,7 @@ define([
 		 */
 		this[APPENDERS] = ARRAY_SLICE.call(arguments);
 	}, {
-		displayName : "core/logger/service",
+		displayName : "troopjs-contrib-browser/logger/service",
 
 		/**
 		 * @handler
