@@ -3,7 +3,7 @@
  */
 define([
 	"troopjs-core/component/service",
-	"troopjs-utils/merge",
+	"troopjs-util/merge",
 	"when"
 ], function logger(Service, merge, when) {
 	"use strict";
