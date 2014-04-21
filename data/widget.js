@@ -10,7 +10,7 @@ define([ "troopjs-browser/component/widget" ], function WidgetModule(Widget) {
 	/**
 	 * Widget that provides the data query api.
 	 * @class data.component.widget
-	 * @extends browser.component.widget
+	 * @extends dom.component.widget
 	 */
 	return Widget.extend({
 		"displayName" : "contrib-browser/data/widget",

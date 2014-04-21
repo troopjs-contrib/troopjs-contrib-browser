@@ -11,7 +11,7 @@ define([
 	/**
 	 * A widget that can prime the cache from innerText
 	 * @class browser.cache.widget
-	 * @extends browser.component.widget
+	 * @extends dom.component.widget
 	 */
 
 	var UNDEFINED;
@@ -19,7 +19,7 @@ define([
 
 	/**
 	 * @method constructor
-	 * @inheritdoc browser.component.widget
+	 * @inheritdoc dom.component.widget
 	 * @param {jQuery|HTMLElement} $element The element that this widget should be attached to
 	 * @param {String} displayName A friendly name for this widget
 	 * @param {data.cache.component} cache Cache instance
