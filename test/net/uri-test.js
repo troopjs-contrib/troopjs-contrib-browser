@@ -1,5 +1,5 @@
 /*globals buster:false*/
-buster.testCase("troopjs-browser/net/uri", function (run) {
+buster.testCase("troopjs-dom/net/uri", function (run) {
 	"use strict";
 
 	var assert = buster.referee.assert;

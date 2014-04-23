@@ -3,7 +3,7 @@
  * @license MIT http://troopjs.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
 define([
-	"troopjs-browser/component/widget",
+	"troopjs-dom/component/widget",
 	"../jquery/dimensions"
 ], function DimensionsModule(Widget) {
 	"use strict";

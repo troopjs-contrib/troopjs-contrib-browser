@@ -3,11 +3,12 @@
  * @license MIT http://troopjs.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
 define([
-	"troopjs-browser/component/widget",
-	"../../hash/widget",
+	"troopjs-dom/component/widget",
+	"troopjs-dom/hash/widget",
+	"troopjs-contrib-browser/net/uri",
 	"poly/object",
 	"poly/array"
-], function (Widget, Hash) {
+], function (Widget, Hash, URI) {
 	"use strict";
 
 	var CACHE = "_cache";
@@ -60,16 +61,19 @@ define([
 	}, {
 		"displayName": "contrib-browser/mvc/controller/widget",
 
-		/*
-		 * The "urichange" event is triggered by {@link browser.hash.widget} on application start or page hash changes.
+		/**
+		 * The {@link core.pubsub.hub#event-hub/route/change} event is to be provided by either a hash change event or
+		 * a browser history (pushStates) change.
+		 * @handler
 		 */
-		"dom/urichange": function ($event, uri) {
-			this.request(this.uri2data(uri));
+		"hub/route/change": function (uri) {
+			this.request(this.uri2data(URI(uri)));
 		},
 
 		/**
-		 * Request for route changes to the current URI.
+		 * Request for route changes with the specified data.
 		 * @param {Object} requests The hash of segments and values to be changed.
+		 * @fires core.pubsub.hub#event-hub/route/set
 		 */
 		"request": function requestRouteChanges(requests) {
 			var me = this;
@@ -98,11 +102,13 @@ define([
 
 						// Emit all cached properties.
 						resolve(me.emit("results", results).then(function() {
-								// Emit only the changed properties.
-								return updated && me.emit("updates", updates).then(lastValue);
+							// Emit only the changed properties.
+							return updated && me.emit("updates", updates).then(lastValue);
 						}).then(function() {
-							// Change the hash to new URI.
-							me.$element.trigger("hashset", [me.data2uri(results), true]);
+							// Change to the new URI.
+							var uri = me.data2uri(results);
+							if (uri)
+								me.publish("route/set", uri, true);
 						}).yield(results));
 					}
 				});
@@ -160,12 +166,10 @@ define([
 		 * The implementation of this method would look like:
 		 *
 		 * 	"data2uri": function (data){
-		 * 		var uri = URI();
 		 * 		var paths = [data.page.title, data.section.name];
 		 * 		if(data.item)
 		 * 			paths.push(data.item.id);
-		 * 		uri.path = URI.Path(paths);
-		 * 		return uri;
+		 * 		return URI.Path(paths);
 		 * 	}
 		 *
 		 * @param {Object} data Arbitrary data object that reflects the current states of the page.
