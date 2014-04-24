@@ -2,7 +2,7 @@
 	"name": "troopjs-contrib-browser",
 	"version": "0.1.0",
 	"authors": [
-		"Mikael Karon"
+		"TroopJS Team"
 	],
 	"description": "TroopJS browser contributions",
 	"license": "MIT",
@@ -13,7 +13,7 @@
 		"test"
 	],
 	"dependencies": {
-		"troopjs-browser": "~4",
+		"troopjs-browser": "~5",
 		"troopjs-core": "~3.0",
 		"jquery": ">=1.7.0 <2.1.0"
 	}
