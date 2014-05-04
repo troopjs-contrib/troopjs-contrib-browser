@@ -5,7 +5,7 @@
 define([
 	"troopjs-dom/component/widget",
 	"poly/json"
-], function CacheWidgetModule(Widget) {
+], function PushCacheWidgetModule(Widget) {
 	"use strict";
 
 	/**
@@ -27,7 +27,7 @@ define([
 	 * @throws {Error} If $element is not of supported type
 	 * @throws {Error} If cache is not provided
 	 */
-	return Widget.extend(function CacheWidget($element, displayName, cache) {
+	return Widget.extend(function PushCacheWidget($element, displayName, cache) {
 		if (cache === UNDEFINED) {
 			throw new Error("No cache provided");
 		}
@@ -40,7 +40,7 @@ define([
 		 */
 		this[CACHE] = cache;
 	}, {
-		"displayName" : "contrib-browser/cache/widget",
+		"displayName" : "contrib-browser/fillcache/widget",
 
 		"sig/initialize" : function onInitialize() {
 			this[CACHE].put(JSON.parse(this.$element.text()));
