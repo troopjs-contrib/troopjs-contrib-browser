@@ -108,7 +108,7 @@ define([
 							// Change to the new URI.
 							var uri = me.data2uri(results);
 							if (uri)
-								me.publish("route/set", uri, true);
+								me.publish("route/set", uri, null, true);
 						}).yield(results));
 					}
 				});
