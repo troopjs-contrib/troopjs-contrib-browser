@@ -67,7 +67,10 @@ define([
 		 * @handler
 		 */
 		"hub/route/change": function (uri) {
-			this.request(this.uri2data(URI(uri)));
+			var data = this.uri2data(URI(uri));
+			if (data) {
+				this.request(data);
+			}
 		},
 
 		/**
