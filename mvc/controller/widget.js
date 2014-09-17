@@ -12,6 +12,7 @@ define([
 	"use strict";
 
 	var CACHE = "_cache";
+	var UNDEFINED = undefined;
 
 	var ARRAY_SLICE = Array.prototype.slice;
 	var currTaskNo = 0;
@@ -68,7 +69,7 @@ define([
 		 */
 		"hub/route/change": function (uri) {
 			var data = this.uri2data(URI(uri));
-			if (data) {
+			if (data !== UNDEFINED) {
 				this.request(data);
 			}
 		},
